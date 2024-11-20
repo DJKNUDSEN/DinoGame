@@ -163,6 +163,10 @@ function move(direction) {
             alert(`Game Over! Dinoen blev for sulten. Du fik ${score} point.`);
             initGame();
         }
+        if (!areRabbitsLeft()) {
+            alert(`Game Over! Dinoen spiste den sidste kanin. Du fik ${score} point.`);
+            initGame();
+        }
     }
 }
 
