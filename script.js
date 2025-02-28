@@ -93,7 +93,7 @@ function renderGrid() {
             gridElement.appendChild(tile);
         });
     });
-    scoreElement.textContent = `Score: ${health}`;
+    scoreElement.textContent = `Score: ${score}`;
 }
 
 function getDImage() {
