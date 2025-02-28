@@ -34,14 +34,8 @@ function addRandomTile() {
     const emptyCells = getEmptyCells();
     if (emptyCells.length > 0) {
         const [r, c] = emptyCells[Math.floor(Math.random() * emptyCells.length)];
-        if(spawnRNext){
-            grid[r][c] = "R";
-            spawnRNext = false;
-            addRandomTile()
-        }
-        else{
-            grid[r][c] = "C";
-        }
+        grid[r][c] = spawnRNext ? "R" : "C";
+        spawnRNext = false; // Reset "R" spawning flag
          // Reset "R" spawning flag
     }
 }
